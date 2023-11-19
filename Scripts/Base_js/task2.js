@@ -33,9 +33,6 @@ function checkSyntax (input){
         
     }
 
-    console.log(string);
-    console.log(result);
-
     return result;
 }
 
@@ -54,13 +51,12 @@ try {
     test(checkSyntax, ["><"], 1);
     test(checkSyntax, ["]["], 1);
     test(checkSyntax, ["())(()"], 1);
+    test(checkSyntax, ["(<{[]}>)"], 0);
 
      console.info("Congratulations! All tests passed.");
 } catch(e) {
     console.error(e);
 }
-
-// console.log(checkSyntax("---(++++)----"));
 
 // Простая функция тестирования
 function test(call, args, count, n) {
