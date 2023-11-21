@@ -52,6 +52,11 @@ try {
     test(checkSyntax, ["]["], 1);
     test(checkSyntax, ["())(()"], 1);
     test(checkSyntax, ["(<{[]}>)"], 0);
+    test(checkSyntax, ["<{[]}>"], 0);
+    test(checkSyntax, ["<>"], 0);
+    test(checkSyntax, ["{}"], 0);
+    test(checkSyntax, ["[]"], 0);
+    test(checkSyntax, ["()"], 0);
 
      console.info("Congratulations! All tests passed.");
 } catch(e) {
